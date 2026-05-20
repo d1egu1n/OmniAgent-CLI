@@ -3,5 +3,629 @@
         "data": "2026-05-09 18:30:00",
         "evento": "Arquivo analisado",
         "detalhes": "teste.py"
+    },
+    {
+        "data": "2026-05-17 14:30:58",
+        "nivel": "WARNING",
+        "evento": "Configuração ausente ou corrompida. Criando padrão.",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-17 14:30:58",
+        "nivel": "INFO",
+        "evento": "Configurações salvas com sucesso.",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-17 14:30:58",
+        "nivel": "WARNING",
+        "evento": "Não foi possível ler 'test_dir\\file1.txt'",
+        "detalhes": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+    },
+    {
+        "data": "2026-05-17 14:30:58",
+        "nivel": "WARNING",
+        "evento": "Não foi possível ler 'test_dir\\file2.log'",
+        "detalhes": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+    },
+    {
+        "data": "2026-05-17 14:30:58",
+        "nivel": "WARNING",
+        "evento": "Não foi possível ler 'test_dir\\file3.md'",
+        "detalhes": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+    },
+    {
+        "data": "2026-05-17 14:30:58",
+        "nivel": "INFO",
+        "evento": "Análise de diretório finalizada",
+        "detalhes": "Pasta: test_dir"
+    },
+    {
+        "data": "2026-05-17 14:32:14",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file1.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-17 14:32:14",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file1.txt"
+    },
+    {
+        "data": "2026-05-17 14:32:14",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file2.log"
+    },
+    {
+        "data": "2026-05-17 14:32:14",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'fail' encontrada",
+        "detalhes": "Arquivo: file3.md (3 ocorrências)"
+    },
+    {
+        "data": "2026-05-17 14:32:14",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file3.md"
+    },
+    {
+        "data": "2026-05-17 14:32:14",
+        "nivel": "INFO",
+        "evento": "Análise de diretório finalizada",
+        "detalhes": "Pasta: test_dir"
+    },
+    {
+        "data": "2026-05-17 14:32:35",
+        "nivel": "INFO",
+        "evento": "Estatísticas geradas",
+        "detalhes": "Analisada a pasta: test_dir"
+    },
+    {
+        "data": "2026-05-17 14:33:05",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file1.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-17 14:33:05",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file1.txt"
+    },
+    {
+        "data": "2026-05-17 14:33:05",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file2.log"
+    },
+    {
+        "data": "2026-05-17 14:33:05",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'fail' encontrada",
+        "detalhes": "Arquivo: file3.md (3 ocorrências)"
+    },
+    {
+        "data": "2026-05-17 14:33:05",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file3.md"
+    },
+    {
+        "data": "2026-05-17 14:33:05",
+        "nivel": "INFO",
+        "evento": "Análise de diretório finalizada",
+        "detalhes": "Pasta: test_dir"
+    },
+    {
+        "data": "2026-05-17 14:33:36",
+        "nivel": "ERROR",
+        "evento": "Falha Crítica na Execução",
+        "detalhes": "'palavras_alerta'"
+    },
+    {
+        "data": "2026-05-17T14:45:36.947027",
+        "nivel": "ERROR",
+        "evento": "Falha Crítica na Execução",
+        "detalhes": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+    },
+    {
+        "data": "2026-05-17T14:46:09.559084",
+        "nivel": "WARNING",
+        "evento": "Configuração ausente ou corrompida. Criando padrão.",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-17T14:46:09.559614",
+        "nivel": "ERROR",
+        "evento": "Falha Crítica na Execução",
+        "detalhes": "name 'os' is not defined"
+    },
+    {
+        "data": "2026-05-17T14:46:37.119783",
+        "nivel": "WARNING",
+        "evento": "Configuração ausente ou corrompida. Criando padrão.",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-17T14:46:37.122925",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file1.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-17T14:46:37.122925",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file1.txt"
+    },
+    {
+        "data": "2026-05-17T14:46:37.122925",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file2.log"
+    },
+    {
+        "data": "2026-05-17T14:46:37.129514",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'fail' encontrada",
+        "detalhes": "Arquivo: file3.md (3 ocorrências)"
+    },
+    {
+        "data": "2026-05-17T14:46:37.132557",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file3.md"
+    },
+    {
+        "data": "2026-05-17T14:46:37.134613",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file4.LOG (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-17T14:46:37.138287",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file4.LOG"
+    },
+    {
+        "data": "2026-05-17T14:46:37.145050",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file_utf16.txt"
+    },
+    {
+        "data": "2026-05-17T14:46:37.147572",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: MAIUSCULO.LOG (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-17T14:46:37.147572",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "MAIUSCULO.LOG"
+    },
+    {
+        "data": "2026-05-17T14:46:37.147572",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "terror.txt"
+    },
+    {
+        "data": "2026-05-17T14:46:37.154168",
+        "nivel": "INFO",
+        "evento": "Análise de diretório finalizada",
+        "detalhes": "Pasta: test_dir"
+    },
+    {
+        "data": "2026-05-20T16:43:50.631984",
+        "nivel": "WARNING",
+        "evento": "Configuração ausente ou corrompida. Criando padrão.",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-20T16:44:40.243358",
+        "nivel": "WARNING",
+        "evento": "Configuração ausente ou corrompida. Criando padrão.",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-20T16:44:40.246358",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file1.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:44:40.248357",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file1.txt"
+    },
+    {
+        "data": "2026-05-20T16:44:40.250701",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file2.log"
+    },
+    {
+        "data": "2026-05-20T16:44:40.252225",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'fail' encontrada",
+        "detalhes": "Arquivo: file3.md (3 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:44:40.253227",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file3.md"
+    },
+    {
+        "data": "2026-05-20T16:44:40.257236",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file4.LOG (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:44:40.260226",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file4.LOG"
+    },
+    {
+        "data": "2026-05-20T16:44:40.264256",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file_utf16.txt"
+    },
+    {
+        "data": "2026-05-20T16:44:40.266249",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: MAIUSCULO.LOG (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:44:40.268248",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "MAIUSCULO.LOG"
+    },
+    {
+        "data": "2026-05-20T16:44:40.270248",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "terror.txt"
+    },
+    {
+        "data": "2026-05-20T16:44:40.274252",
+        "nivel": "INFO",
+        "evento": "Análise de diretório finalizada",
+        "detalhes": "Pasta: test_dir"
+    },
+    {
+        "data": "2026-05-20T16:45:11.538832",
+        "nivel": "INFO",
+        "evento": "Arquivo encontrado",
+        "detalhes": "test_dir\\file1.txt"
+    },
+    {
+        "data": "2026-05-20T16:45:21.726659",
+        "nivel": "INFO",
+        "evento": "Comando executado: dir",
+        "detalhes": "O volume na unidade C nÆo tem nome.\n O N£mero de S‚rie do Volume ‚ 9C38-04AF\n\n Pasta de C:\\Users\\EDSON\\Documents\\MeusProjetos\\OmniAgent-CLI\\test_dir\n\n17/05/2026  14:45    <DIR>          .\n17/05/2026  14:30    <DIR>          ..\n17/05/2026  14:31                20 file1.txt\n17/05/2026  14:31                16 file2.log\n17/05/2026  14:31                16 file3.md\n17/05/2026  14:33                 7 file4.LOG\n17/05/2026  14:45                16 file_utf16.txt\n17/05/2026  14:45                 7 MAIUSCULO.LOG\n17/05/2026  14:45                20 terror.txt\n               7 arquivo(s)            102 bytes\n               2 pasta(s)   16.215.904.256 bytes dispon¡veis"
+    },
+    {
+        "data": "2026-05-20T16:47:02.433324",
+        "nivel": "INFO",
+        "evento": "Comando executado: wmic logicaldisk get size,freespace,caption",
+        "detalhes": "Caption  FreeSpace    Size          \n\nC:       16213745664  119926681600  \n\nD:                                  \n\nF:"
+    },
+    {
+        "data": "2026-05-20T16:47:10.638606",
+        "nivel": "WARNING",
+        "evento": "Configuração ausente ou corrompida. Criando padrão.",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-20T16:47:10.641607",
+        "nivel": "INFO",
+        "evento": "Configurações salvas com sucesso.",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-20T16:47:10.643606",
+        "nivel": "INFO",
+        "evento": "Palavra de alerta adicionada: alert",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-20T16:51:36.205148",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file1.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:51:36.207148",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file1.txt"
+    },
+    {
+        "data": "2026-05-20T16:51:36.214723",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file2.log"
+    },
+    {
+        "data": "2026-05-20T16:51:36.219058",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'fail' encontrada",
+        "detalhes": "Arquivo: file3.md (3 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:51:36.220056",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file3.md"
+    },
+    {
+        "data": "2026-05-20T16:51:36.223074",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file4.LOG (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:51:36.225074",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file4.LOG"
+    },
+    {
+        "data": "2026-05-20T16:51:36.235876",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file_utf16.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:51:36.237886",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file_utf16.txt"
+    },
+    {
+        "data": "2026-05-20T16:51:36.240232",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: MAIUSCULO.LOG (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:51:36.246127",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "MAIUSCULO.LOG"
+    },
+    {
+        "data": "2026-05-20T16:51:36.250445",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "terror.txt"
+    },
+    {
+        "data": "2026-05-20T16:51:36.252442",
+        "nivel": "INFO",
+        "evento": "Análise de diretório finalizada",
+        "detalhes": "Pasta: test_dir"
+    },
+    {
+        "data": "2026-05-20T16:51:43.176465",
+        "nivel": "INFO",
+        "evento": "Comando executado: dir",
+        "detalhes": "O volume na unidade C não tem nome.\n O Número de Série do Volume é 9C38-04AF\n\n Pasta de C:\\Users\\EDSON\\Documents\\MeusProjetos\\OmniAgent-CLI\\test_dir\n\n17/05/2026  14:45    <DIR>          .\n20/05/2026  16:50    <DIR>          ..\n17/05/2026  14:31                20 file1.txt\n17/05/2026  14:31                16 file2.log\n17/05/2026  14:31                16 file3.md\n17/05/2026  14:33                 7 file4.LOG\n17/05/2026  14:45                16 file_utf16.txt\n17/05/2026  14:45                 7 MAIUSCULO.LOG\n17/05/2026  14:45                20 terror.txt\n               7 arquivo(s)            102 bytes\n               2 pasta(s)   16.201.318.400 bytes disponíveis"
+    },
+    {
+        "data": "2026-05-20T16:52:07.407806",
+        "nivel": "WARNING",
+        "evento": "Configuração corrompida no disco. Recriando padrão.",
+        "detalhes": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "data": "2026-05-20T16:52:07.410812",
+        "nivel": "INFO",
+        "evento": "Configurações salvas com sucesso.",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-20T16:52:19.551482",
+        "nivel": "INFO",
+        "evento": "Configurações salvas com sucesso.",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-20T16:52:19.557475",
+        "nivel": "INFO",
+        "evento": "Palavra de alerta adicionada: .log",
+        "detalhes": ""
+    },
+    {
+        "data": "2026-05-20T16:52:26.992841",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file1.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:26.999049",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file1.txt"
+    },
+    {
+        "data": "2026-05-20T16:52:27.004041",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file2.log"
+    },
+    {
+        "data": "2026-05-20T16:52:27.010046",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'fail' encontrada",
+        "detalhes": "Arquivo: file3.md (3 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:27.016042",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file3.md"
+    },
+    {
+        "data": "2026-05-20T16:52:27.019044",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file4.LOG (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:27.021055",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file4.LOG"
+    },
+    {
+        "data": "2026-05-20T16:52:27.026056",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file_utf16.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:27.029204",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file_utf16.txt"
+    },
+    {
+        "data": "2026-05-20T16:52:27.034717",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: MAIUSCULO.LOG (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:27.038258",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "MAIUSCULO.LOG"
+    },
+    {
+        "data": "2026-05-20T16:52:27.041258",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "terror.txt"
+    },
+    {
+        "data": "2026-05-20T16:52:27.044856",
+        "nivel": "INFO",
+        "evento": "Análise de diretório finalizada",
+        "detalhes": "Pasta: test_dir"
+    },
+    {
+        "data": "2026-05-20T16:52:50.070634",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file1.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:50.076653",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file1.txt"
+    },
+    {
+        "data": "2026-05-20T16:52:50.081976",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file2.log"
+    },
+    {
+        "data": "2026-05-20T16:52:50.088747",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'fail' encontrada",
+        "detalhes": "Arquivo: file3.md (3 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:50.094998",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file3.md"
+    },
+    {
+        "data": "2026-05-20T16:52:50.100395",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file4.LOG (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:50.102393",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file4.LOG"
+    },
+    {
+        "data": "2026-05-20T16:52:50.106398",
+        "nivel": "WARNING",
+        "evento": "Alerta: '.log' encontrada",
+        "detalhes": "Arquivo: file5.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:50.112694",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file5.txt"
+    },
+    {
+        "data": "2026-05-20T16:52:50.121995",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: file_utf16.txt (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:50.127987",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "file_utf16.txt"
+    },
+    {
+        "data": "2026-05-20T16:52:50.131496",
+        "nivel": "WARNING",
+        "evento": "Alerta: 'error' encontrada",
+        "detalhes": "Arquivo: MAIUSCULO.LOG (1 ocorrências)"
+    },
+    {
+        "data": "2026-05-20T16:52:50.134495",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "MAIUSCULO.LOG"
+    },
+    {
+        "data": "2026-05-20T16:52:50.139603",
+        "nivel": "INFO",
+        "evento": "Arquivo analisado",
+        "detalhes": "terror.txt"
+    },
+    {
+        "data": "2026-05-20T16:52:50.143598",
+        "nivel": "INFO",
+        "evento": "Análise de diretório finalizada",
+        "detalhes": "Pasta: test_dir"
+    },
+    {
+        "data": "2026-05-20T16:53:14.885422",
+        "nivel": "INFO",
+        "evento": "Arquivo movido",
+        "detalhes": "test.jpg -> temp_organize\\Imagens (test.jpg)"
+    },
+    {
+        "data": "2026-05-20T16:53:14.890562",
+        "nivel": "INFO",
+        "evento": "Arquivo movido",
+        "detalhes": "test.txt -> temp_organize\\Documentos (test.txt)"
     }
 ]

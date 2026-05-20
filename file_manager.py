@@ -1,7 +1,7 @@
 import os
 import shutil
 from typing import List, Optional, Dict
-from colorama import Fore, Style
+from colors import Fore, Style, init
 from logger import Logger
 
 def listar_arquivos(pasta: str) -> List[str]:
@@ -15,10 +15,34 @@ def listar_arquivos(pasta: str) -> List[str]:
         return []
 
 def ler_arquivo(caminho: str) -> Optional[str]:
-    """Lê o conteúdo de um arquivo de texto e retorna como string."""
+    """
+    Lê o conteúdo de um arquivo de texto e retorna como string.
+    
+    Detecta BOMs de codificação comuns (UTF-8, UTF-16 LE, UTF-16 BE)
+    e tenta fallbacks robustos (UTF-8 e CP1252) com tolerância a erros.
+    """
     try:
-        with open(caminho, 'r', encoding='utf-8') as f:
-            return f.read()
+        if not os.path.exists(caminho):
+            return None
+
+        with open(caminho, 'rb') as f:
+            dados_brutos = f.read()
+
+        # Detecção de BOMs (Byte Order Mark)
+        if dados_brutos.startswith(b'\xff\xfe'):
+            return dados_brutos.decode('utf-16-le', errors='ignore')
+        elif dados_brutos.startswith(b'\xfe\xff'):
+            return dados_brutos.decode('utf-16-be', errors='ignore')
+        elif dados_brutos.startswith(b'\xef\xbb\xbf'):
+            return dados_brutos.decode('utf-8-sig', errors='ignore')
+
+        # Tenta decodificar como UTF-8 padrão
+        try:
+            return dados_brutos.decode('utf-8')
+        except UnicodeDecodeError:
+            # Fallback para codificação comum legado do Windows (CP1252 / Latin-1)
+            return dados_brutos.decode('cp1252', errors='ignore')
+
     except Exception as e:
         Logger.warning(f"Não foi possível ler '{caminho}'", str(e))
         print(Fore.YELLOW + f"Aviso ao ler arquivo '{caminho}': {e}" + Style.RESET_ALL)
@@ -91,7 +115,27 @@ def organizar_arquivos(pasta: str) -> None:
     arquivos = listar_arquivos(pasta)
     movidos = 0
 
+    # Diretórios e arquivos críticos para ignorar
+    dirs_ignorados = {
+        ".git", "__pycache__", "venv", ".env", "docs", 
+        "Imagens", "Documentos", "Videos", "Outros"
+    }
+    arquivos_ignorados = {
+        "main.py", "logger.py", "config_manager.py", "analyzer.py",
+        "file_manager.py", "system_ops.py", "colors.py", 
+        "requirements.txt", "LICENSE", "README.md"
+    }
+
     for arquivo in arquivos:
+        nome_lower = arquivo.lower()
+        if (
+            arquivo in dirs_ignorados or 
+            arquivo in arquivos_ignorados or 
+            nome_lower.endswith(".md") or 
+            nome_lower.endswith(".json")
+        ):
+            continue
+
         caminho_arquivo = os.path.join(pasta, arquivo)
 
         if os.path.isfile(caminho_arquivo):

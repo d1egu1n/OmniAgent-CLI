@@ -1,3 +1,4 @@
+import os
 import json
 from typing import Dict, List, Any
 from logger import Logger
@@ -7,31 +8,52 @@ ARQUIVO_CONFIG = "config.json"
 def carregar_config() -> Dict[str, Any]:
     """
     Carrega as configurações do arquivo JSON.
-    Se o arquivo não existir ou estiver corrompido, recria com valores padrão.
+    Se o arquivo não existir, estiver corrompido ou contiver tipos inválidos,
+    recria e salva os valores padrão em disco de forma resiliente.
     """
-    try:
-        with open(ARQUIVO_CONFIG, "r", encoding="utf-8") as f:
-            return json.load(f)
+    config: Dict[str, Any] = {}
+    config_corrompida = False
 
-    except (FileNotFoundError, json.JSONDecodeError):
-        Logger.warning("Configuração ausente ou corrompida. Criando padrão.")
-        config_padrao = {
-            "palavras_alerta": [
-                "error",
-                "fail",
-                "warning"
-            ],
-            "extensoes_suportadas": [
-                ".txt",
-                ".log",
-                ".json",
-                ".csv",
-                ".md",
-                ".py"
-            ]
-        }
-        salvar_config(config_padrao)
-        return config_padrao
+    if os.path.exists(ARQUIVO_CONFIG):
+        try:
+            with open(ARQUIVO_CONFIG, "r", encoding="utf-8") as f:
+                dados = json.load(f)
+                if isinstance(dados, dict):
+                    config = dados
+                else:
+                    config_corrompida = True
+        except (json.JSONDecodeError, UnicodeDecodeError, Exception) as e:
+            Logger.warning("Configuração corrompida no disco. Recriando padrão.", str(e))
+            config_corrompida = True
+    else:
+        config_corrompida = True
+
+    # Validação e recuperação de campos obrigatórios com tipos corretos
+    palavras = config.get("palavras_alerta")
+    if not isinstance(palavras, list):
+        config["palavras_alerta"] = ["error", "fail", "warning"]
+        config_corrompida = True
+    else:
+        # Garantir que todos os itens na lista são strings
+        if not all(isinstance(item, str) for item in palavras):
+            config["palavras_alerta"] = [str(item) for item in palavras]
+            config_corrompida = True
+
+    extensoes = config.get("extensoes_suportadas")
+    if not isinstance(extensoes, list):
+        config["extensoes_suportadas"] = [".txt", ".log", ".json", ".csv", ".md", ".py"]
+        config_corrompida = True
+    else:
+        # Garantir que todos os itens na lista são strings
+        if not all(isinstance(item, str) for item in extensoes):
+            config["extensoes_suportadas"] = [str(item) for item in extensoes]
+            config_corrompida = True
+
+    # Salva a configuração padrão ou corrigida imediatamente se houver corrupção ou arquivo novo
+    if config_corrompida or not os.path.exists(ARQUIVO_CONFIG):
+        salvar_config(config)
+
+    return config
 
 def salvar_config(config: Dict[str, Any]) -> None:
     """Salva o dicionário de configurações no arquivo JSON."""

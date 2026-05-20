@@ -1,7 +1,7 @@
 import os
 import platform
 import subprocess
-from colorama import Fore, Style
+from colors import Fore, Style, init
 from logger import Logger
 
 def listar_arquivos_sistema(pasta: str = ".") -> None:
@@ -25,13 +25,20 @@ def ver_espaco_disco() -> None:
 def executar_comando_sistema(comando: str, cwd: str = ".") -> None:
     """
     Executa um comando no sistema operacional e registra no Logger.
+    
+    Seleciona dinamicamente a codificação adequada ("oem" para Windows,
+    "utf-8" para outros sistemas) com substituição em caso de erro de decoding.
     """
+    sistema = platform.system()
+    codificacao = "oem" if sistema == "Windows" else "utf-8"
+
     try:
         resultado = subprocess.run(
             comando,
             shell=True,
             capture_output=True,
-            text=True,
+            encoding=codificacao,
+            errors="replace",
             cwd=cwd
         )
 

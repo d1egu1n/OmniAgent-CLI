@@ -1,15 +1,29 @@
 import os
+import re
 from typing import Dict
-from colorama import Fore, Style
+from colors import Fore, Style, init
 from logger import Logger
 from config_manager import carregar_config
 from file_manager import listar_arquivos, ler_arquivo
 
 def buscar_palavras(texto: str, palavras: list) -> Dict[str, int]:
-    """Retorna um dicionário com a contagem de ocorrência das palavras no texto."""
+    """
+    Retorna um dicionário com a contagem de ocorrência exata das palavras no texto.
+    
+    Utiliza lookarounds dinâmicos para suportar palavras com caracteres especiais nas bordas
+    (como '.log' ou '#warning'), garantindo o comportamento de casamento exato.
+    """
     resultados = {}
     for palavra in palavras:
-        resultados[palavra] = texto.lower().count(palavra.lower())
+        # Construção dinâmica do padrão de palavra exata suportando caracteres especiais nas bordas
+        padrao = re.escape(palavra)
+        if re.match(r'^\w', palavra):
+            padrao = r'(?<!\w)' + padrao
+        if re.match(r'.*\w$', palavra):
+            padrao = padrao + r'(?!\w)'
+
+        ocorrencias = len(re.findall(padrao, texto, re.IGNORECASE))
+        resultados[palavra] = ocorrencias
     return resultados 
 
 def analisar_pasta(pasta: str) -> None:
@@ -43,8 +57,8 @@ def analisar_pasta(pasta: str) -> None:
     for arq in arquivos:
         caminho = os.path.join(pasta, arq)
         
-        # Analisa apenas arquivos reais e que possuam a extensão correta
-        if os.path.isfile(caminho) and any(arq.endswith(ext) for ext in extensoes_suportadas):
+        # Analisa apenas arquivos reais e que possuam a extensão correta (case-insensitive)
+        if os.path.isfile(caminho) and any(arq.lower().endswith(ext.lower()) for ext in extensoes_suportadas):
             arquivos_suportados += 1
             print(f"- {arq}")
             

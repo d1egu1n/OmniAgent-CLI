@@ -1,6 +1,8 @@
 import argparse
 import sys
-from colorama import init, Fore, Style
+
+from colors import Fore, Style, init
+
 from logger import Logger
 
 # Importações dos módulos modulares

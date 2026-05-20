@@ -1,0 +1,16 @@
+{
+    "palavras_alerta": [
+        "error",
+        "fail",
+        "warning",
+        ".log"
+    ],
+    "extensoes_suportadas": [
+        ".txt",
+        ".log",
+        ".json",
+        ".csv",
+        ".md",
+        ".py"
+    ]
+}
